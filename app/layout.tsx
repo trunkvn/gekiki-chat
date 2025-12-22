@@ -1,4 +1,3 @@
-
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
@@ -17,7 +16,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="vi" className="dark">
-      <body className={`${inter.className} bg-slate-950 text-slate-200 antialiased overflow-hidden`}>
+      <body
+        className={`${inter.className} bg-slate-950 text-slate-200 antialiased overflow-hidden`}
+      >
         {children}
       </body>
     </html>
