@@ -65,4 +65,4 @@ Dự án tập trung vào tính thẩm mỹ với bảng màu Zinc/Gray trung t�
 
 ---
 
-_Phát triển bởi Đội ngũ Gekiki._
+_Phát triển bởi trunk._
