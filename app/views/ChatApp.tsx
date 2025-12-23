@@ -159,7 +159,7 @@ export default function ChatApp() {
   const createNewSession = () => {
     const newSession: ChatSession = {
       id: uuidv4(),
-      title: "Cuộc hội thoại mới",
+      title: "New Conversation",
       messages: [],
       updatedAt: new Date(),
     };
@@ -315,7 +315,7 @@ export default function ChatApp() {
                     ? {
                         ...m,
                         content:
-                          "Lỗi kết nối API. Hãy kiểm tra lại kết nối mạng.",
+                          "Connection error. Please check your network.",
                       }
                     : m
                 ),
@@ -359,7 +359,7 @@ export default function ChatApp() {
     const isValid = file.type.startsWith("image/") || file.type === "application/pdf" || file.type.startsWith("text/");
     
     if (!isValid) {
-      setFileError(`Định dạng file "${file.name}" không được hỗ trợ. Vui lòng gửi ảnh, PDF hoặc file văn bản.`);
+      setFileError(`File format "${file.name}" is not supported. Please send an image, PDF or text file.`);
       return;
     }
 
@@ -382,7 +382,7 @@ export default function ChatApp() {
     const isValid = file.type.startsWith("image/") || file.type === "application/pdf" || file.type.startsWith("text/");
     
     if (!isValid) {
-      setFileError(`Định dạng file "${file.name}" không được hỗ trợ. Vui lòng gửi ảnh, PDF hoặc file văn bản.`);
+      setFileError(`File format "${file.name}" is not supported. Please send an image, PDF or text file.`);
       event.target.value = ""; // Clear input
       return;
     }
@@ -441,7 +441,7 @@ export default function ChatApp() {
             }`}
           >
             <PlusIcon className="w-5 h-5" />
-            {isSidebarOpen && <span>Đoạn chat mới</span>}
+            {isSidebarOpen && <span> New Chat</span>}
           </button>
 
           {isSidebarOpen ? (
@@ -476,14 +476,14 @@ export default function ChatApp() {
                         <button
                           onClick={(e) => togglePinSession(e, s.id)}
                           className="p-1 hover:text-indigo-400"
-                          title="Bỏ ghim"
+                          title="Unpin"
                         >
                           <PinIcon className="w-3.5 h-3.5 fill-current" />
                         </button>
                         <button
                           onClick={(e) => deleteSession(e, s.id)}
                           className="p-1 hover:text-red-400"
-                          title="Xóa"
+                          title="Delete"
                         >
                           <TrashIcon className="w-3.5 h-3.5" />
                         </button>
@@ -495,7 +495,7 @@ export default function ChatApp() {
               )}
               
               <p className="text-[10px] uppercase font-bold text-zinc-600 mb-2">
-                Gần đây
+                Recent
               </p>
               {sessions
                 .filter(s => !s.isPinned)
@@ -521,14 +521,14 @@ export default function ChatApp() {
                     <button
                       onClick={(e) => togglePinSession(e, s.id)}
                       className="p-1 hover:text-indigo-400"
-                      title="Ghim"
+                      title="Pin"
                     >
                       <PinIcon className="w-3.5 h-3.5" />
                     </button>
                     <button
                       onClick={(e) => deleteSession(e, s.id)}
                       className="p-1 hover:text-red-400"
-                      title="Xóa"
+                      title="Delete"
                     >
                       <TrashIcon className="w-3.5 h-3.5" />
                     </button>
@@ -577,7 +577,7 @@ export default function ChatApp() {
               <button
                 onClick={() => signOut()}
                 className="p-2 hover:bg-zinc-800/50 rounded-lg"
-                title="Đăng xuất"
+                title="Logout"
               >
                 <LogOutIcon className="w-5 h-5" />
               </button>
@@ -695,6 +695,7 @@ export default function ChatApp() {
               <div className="absolute inset-0 z-10 flex items-center justify-center bg-indigo-500/5 backdrop-blur-[2px] rounded-2xl border-2 border-dashed border-indigo-500 pointer-events-none">
                 <div className="flex flex-col items-center gap-2">
                   <PlusIcon className="w-8 h-8 text-indigo-400" />
+                  <span className="text-sm font-medium text-indigo-400">Drop file here</span>
                 </div>
               </div>
             )}
