@@ -2,6 +2,8 @@
 
 **Gekiki Chat** is a modern AI chatbot application built on Next.js, integrating the power of Google Gemini models to provide intelligent, multi-modal, and seamless interactive experiences.
 
+![Screenshot](docs/screenshot.png)
+
 ## 🚀 Key Features
 
 - **Multi-modal Interaction:**
