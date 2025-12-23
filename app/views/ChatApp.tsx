@@ -577,6 +577,7 @@ export default function ChatApp() {
               <button
                 onClick={() => signOut()}
                 className="p-2 hover:bg-zinc-800/50 rounded-lg"
+                title="Đăng xuất"
               >
                 <LogOutIcon className="w-5 h-5" />
               </button>

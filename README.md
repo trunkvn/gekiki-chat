@@ -1,36 +1,68 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Gekiki Chat - AI Assistant Platform
 
-## Getting Started
+**Gekiki Chat** là một ứng dụng chatbot AI hiện đại được xây dựng trên nền tảng Next.js, tích hợp sức mạnh của mô hình Google Gemini để cung cấp trải nghiệm tương tác thông minh, đa phương thức và mượt mà.
 
-First, run the development server:
+## 🚀 Tính năng nổi bật
+
+- **Tương tác đa phương thức (Multimodal):**
+  - Hỗ trợ gửi tin nhắn văn bản.
+  - Đọc và phân tích hình ảnh (Paste trực tiếp, Upload file hoặc Kéo & Thả).
+  - Hỗ trợ đọc tệp PDF và file văn bản (.txt).
+- **Quản lý phiên trò chuyện thông minh:**
+  - Lưu lịch sử chat theo từng người dùng (tích hợp Clerk Auth).
+  - **Ghim (Pin) chat:** Giúp giữ các cuộc hội thoại quan trọng luôn ở trên cùng.
+  - Đổi tên tiêu đề tự động dựa trên nội dung tin nhắn đầu tiên.
+- **Trải nghiệm người dùng cao cấp:**
+  - Giao diện Dark Mode sang trọng với hiệu ứng kính (Glassmorphism).
+  - Sidebar linh hoạt: Có thể thu gọn để tối ưu không gian làm việc.
+  - Nhập liệu bằng giọng nói (Voice Input).
+  - Streaming response: AI phản hồi theo thời gian thực.
+- **Bảo mật:** Tích hợp Clerk để quản lý đăng nhập và bảo vệ dữ liệu người dùng.
+
+## 🛠 Nền tảng công nghệ
+
+- **Framework:** [Next.js 16+ (App Router)](https://nextjs.org/)
+- **Ngôn ngữ:** TypeScript
+- **Styling:** Tailwind CSS
+- **AI Engine:** [Google Gemini API](https://ai.google.dev/)
+- **Authentication:** [Clerk](https://clerk.com/)
+- **Icons:** Custom SVG Icons
+- **State Management:** React Hooks (useState, useEffect, useCallback)
+
+## 📦 Cài đặt và Chạy thử
+
+### 1. Cài đặt các gói phụ thuộc
+
+```bash
+npm install
+```
+
+### 2. Cấu hình biến môi trường
+
+Tạo file `.env` ở thư mục gốc và chuẩn bị các khóa sau:
+
+```env
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=your_clerk_pub_key
+CLERK_SECRET_KEY=your_clerk_secret_key
+NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
+NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
+NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL=/
+NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL=/
+# Lưu ý: GEMINI_API_KEY hiện đang được cấu hình trong service (Nên đưa vào .env để bảo mật hơn)
+```
+
+### 3. Chạy server phát triển
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Mở [http://localhost:3000](http://localhost:3000) trên trình duyệt để bắt đầu trải nghiệm.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🎨 Thiết kế
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Dự án tập trung vào tính thẩm mỹ với bảng màu Zinc/Gray trung tính, các hiệu ứng animation mượt mà (animate-in, fade-in, slide-in) và bố cục responsive hoàn hảo trên cả Mobile và Desktop.
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+_Phát triển bởi Đội ngũ Gekiki._
