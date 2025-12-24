@@ -22,7 +22,7 @@ const ChatMessage: React.FC<{
           className={`flex flex-col ${isUser ? "items-end" : "items-start"}`}
         >
           <div
-            className={`p-4 rounded-2xl whitespace-pre-wrap leading-relaxed max-w-[550px] ${
+            className={`p-3.5 rounded-2xl leading-relaxed max-w-[550px] ${
               isUser
                 ? "bg-indigo-800 text-white rounded-tr-none"
                 : "bg-slate-800 text-slate-100 border border-slate-700 rounded-tl-none"

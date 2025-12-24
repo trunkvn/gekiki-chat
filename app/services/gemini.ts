@@ -42,7 +42,7 @@ export class GeminiService {
 
   constructor() {
     this.ai = new GoogleGenAI({
-      apiKey: "AIzaSyDkveypj9vDnKDGjiOd1oeGG0vTQlovTYs",
+      apiKey: process.env.NEXT_PUBLIC_GEMINI_API_KEY,
     });
   }
 
